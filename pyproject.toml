@@ -1,4 +1,3 @@
 [tool.black]
-line-length = 80
-target-version = ['py312']
-include = '\.pyi?$'
+line-length = 20  # Adjust line length if needed
+target-version = ["py312"]  # Target Python 3.12
