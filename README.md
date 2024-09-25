@@ -1,5 +1,4 @@
-# Constructions of fullerenes that maximize the $p$-anionic Clar number for $p
-> 0$.
+# Constructions of fullerenes that maximize the $p$-anionic Clar number for $p > 0$.
 
 ## Background
 
