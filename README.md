@@ -25,28 +25,28 @@ faces in $\mathcal{F}$ is called a **p-anionic Clar structure** on $F_n$.
 ### Files:
 There are seven files used to generate fullerenes:
 
-`02_make_adj.py` <- Generates fullerenes that maximize the 2-anionic Clar number
+`build/02_make_adj.py` <- Generates fullerenes that maximize the 2-anionic Clar number
 on $n \ge 40$ (except for $n = 40$) vertices.
 
-`04_make_adj.py` <- Generates fullerenes that maximize the 4-anionic Clar number
+`build/04_make_adj.py` <- Generates fullerenes that maximize the 4-anionic Clar number
 on $n \ge 36$ (except for $n = 40$) vertices.
 
-`06_make_adj.py` <- Generates fullerenes that maximize the 6-anionic Clar number
+`build/06_make_adj.py` <- Generates fullerenes that maximize the 6-anionic Clar number
 on $n \ge 56$ vertices.
 
-`08_make_adj.py` <- Generates fullerenes that maximize the 8-anionic Clar number
+`build/08_make_adj.py` <- Generates fullerenes that maximize the 8-anionic Clar number
 on $n \ge 58$ vertices.
 
-`10_make_adj.py` <- Generates fullerenes that maximize the 10-anionic Clar number
+`build/10_make_adj.py` <- Generates fullerenes that maximize the 10-anionic Clar number
 on $n \ge 54$ (except for $n = 58$) vertices.
 
-`12_2_mod_6_make_adj.py` <- Generates fullerenes that maximize the 12-anionic Clar
+`build/12_2_mod_6_make_adj.py` <- Generates fullerenes that maximize the 12-anionic Clar
 number on $n \ge 110$ vertices where $n$ is congruent to 2 modulo 6
 
-`12_4_mod_6_make_adj.py` <- Generates fullerenes that maximize the 12-anionic Clar
+`build/12_4_mod_6_make_adj.py` <- Generates fullerenes that maximize the 12-anionic Clar
 number on $n \ge 88$ vertices where $n$ is congruent to 4 modulo 6
 
-Note that leapfrog fullerenes maximize the 12-anionic Clar number on $n$
+**Note:** leapfrog fullerenes maximize the 12-anionic Clar number on $n$
 vertices when $n$ is congruent to $0$ modulo $6$.
 
 ### To run:
