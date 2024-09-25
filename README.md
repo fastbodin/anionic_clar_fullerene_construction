@@ -49,9 +49,9 @@ on $n \ge 58$ vertices.
 `build/10_make_adj.py` <- Generates fullerenes that maximize $C_{10}(F_n)$
 on $n \ge 54$ (except for $n = 58$) vertices.
 
-`build/12_2_mod_6_make_adj.py` <- Generates fullerenes that maximize $C_{12}(F_n)$ on $n \ge 110$ vertices where $n$ is congruent to 2 modulo 6
+`build/12_2_mod_6_make_adj.py` <- Generates fullerenes that maximize $C_{12}(F_n)$ on $n \ge 110$ ($n \equiv 2 \mod{6}$) vertices.
 
-`build/12_4_mod_6_make_adj.py` <- Generates fullerenes that maximize $C_{12}(F_n)$ on $n \ge 88$ vertices where $n \equiv 4 \cmod 6$.
+`build/12_4_mod_6_make_adj.py` <- Generates fullerenes that maximize $C_{12}(F_n)$ on $n \ge 88$ ($n \equiv 4 \mod{6}$) vertices.
 
 **Note:** Leapfrog fullerenes maximize the 12-anionic Clar number on $n$
 vertices when $n$ is congruent to $0$ modulo $6$.
