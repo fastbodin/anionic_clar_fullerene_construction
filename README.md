@@ -34,24 +34,26 @@ A Python library that can call `import sys`
 ### Files:
 There are seven files used to generate fullerenes:
 
-`build/02_make_adj.py` <- Generates fullerenes that maximize $C_2(F_n)$
-on $n \ge 40$ (except for $n = 40$) vertices.
+`build/02_make_adj.py` <- Fullerenes that maximize $C_2(F_n)$ on $n \ge 40$ ($n
+\neq 40$) vertices.
 
-`build/04_make_adj.py` <- Generates fullerenes that maximize $C_4(F_n)$
-on $n \ge 36$ (except for $n = 40$) vertices.
+`build/04_make_adj.py` <- Fullerenes that maximize $C_4(F_n)$ on $n \ge 36$ ($n
+\neq 40$) vertices.
 
-`build/06_make_adj.py` <- Generates fullerenes that maximize $C_6(F_n)$
-on $n \ge 56$ vertices.
+`build/06_make_adj.py` <- Fullerenes that maximize $C_6(F_n)$ on $n \ge 56$
+vertices.
 
-`build/08_make_adj.py` <- Generates fullerenes that maximize $C_8(F_n)$
-on $n \ge 58$ vertices.
+`build/08_make_adj.py` <- Fullerenes that maximize $C_8(F_n)$ on $n \ge 58$
+vertices.
 
-`build/10_make_adj.py` <- Generates fullerenes that maximize $C_{10}(F_n)$
-on $n \ge 54$ (except for $n = 58$) vertices.
+`build/10_make_adj.py` <- Fullerenes that maximize $C_{10}(F_n)$ on $n \ge 54$
+($n \neq 58$) vertices.
 
-`build/12_2_mod_6_make_adj.py` <- Generates fullerenes that maximize $C_{12}(F_n)$ on $n \ge 110$ ($n \equiv 2 \mod{6}$) vertices.
+`build/12_2_mod_6_make_adj.py` <- Fullerenes that maximize $C_{12}(F_n)$ on $n
+\ge 110$ ($n \equiv 2 \mod{6}$) vertices.
 
-`build/12_4_mod_6_make_adj.py` <- Generates fullerenes that maximize $C_{12}(F_n)$ on $n \ge 88$ ($n \equiv 4 \mod{6}$) vertices.
+`build/12_4_mod_6_make_adj.py` <- Fullerenes that maximize $C_{12}(F_n)$ on $n
+\ge 88$ ($n \equiv 4 \mod{6}$) vertices.
 
 **Note:** Leapfrog fullerenes maximize the 12-anionic Clar number on $n$
 vertices when $n$ is congruent to $0$ modulo $6$.
