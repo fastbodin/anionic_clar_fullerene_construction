@@ -32,6 +32,7 @@ those defined by the constructions in [INSERT PAPER].
 A Python library that can call `import sys`
 
 ### Files:
+
 There are seven files used to generate fullerenes:
 
 `build/02_make_adj.py` <- Fullerenes that maximize $C_2(F_n)$ on $n \ge 40$ ($n
@@ -59,10 +60,13 @@ vertices.
 $n \equiv 0 \mod{6}$ vertices.
 
 ### To run:
-`python {file you want to run} {n}` where `n` is the maximum size of a
-fullerene you would like to generate.
+
+`python {file you want to run} {n}`
+
+where `n` is the maximum size of a fullerene you would like to generate.
 
 ### Output:
+
 The adjacency lists of fullerenes that maximize the chosen $p$-anionic
 Clar number with the following format:
 
