@@ -18,6 +18,15 @@ faces in $\mathcal{F}$ is called a **p-anionic Clar structure** on $F_n$.
 
 ## Code
 
+The code in this repo generates the adjacency lists of fullerenes defined
+by the constructions in [INSERT PAPER]. These fullerenes are used to prove
+tight upper bounds for the $p$-anionic Clar number of fullerenes on $n$ vertices
+(for even $p > 0$).
+
+**NOTE:** There are other fullerenes that maximize the $p$-anionic Clar
+numbers on $n$ vertices, the fullerenes generated here are simply
+representatives defined by the constructions in [INSERT PAPER].
+
 ### Requirements:
 
 1. A Python library that can call `import sys`
