@@ -190,6 +190,148 @@ def add_ring(G, cap_type, v_index, ring_num):
     add_edges(G, v_index, new_edges)
 
 
+def unique_family(max_n, num_rings):
+    # caps + rings
+    num_v = 70 + 30 * num_rings
+    if num_v > max_n:
+        return 0
+
+    # bottom cap
+    new_edges = [
+        [0, 4, 8, 1],
+        [1, 0, 11, 2],
+        [2, 1, 14, 3],
+        [3, 2, 17, 4],
+        [4, 3, 5, 0],
+        [5, 4, 19, 6],
+        [6, 7, 5],
+        [7, 8, 6],
+        [8, 7, 9, 0],
+        [9, 10, 8],
+        [10, 11, 9],
+        [11, 10, 12, 1],
+        [12, 13, 11],
+        [13, 14, 12],
+        [14, 13, 15, 2],
+        [15, 16, 14],
+        [16, 17, 15],
+        [17, 16, 18, 3],
+        [18, 19, 17],
+        [19, 5, 18],
+    ]
+
+    G = [[] for _ in range(num_v)]
+
+    # fill in info for bottom cap
+    add_edges(G, 0, new_edges)
+
+    previous = [-1, -2, -4, -5, -7, -8, -10, -11, -13, -14]
+
+    new_edges = [
+        [0, 19, 1, previous[0]],
+        [1, 0, 2, previous[-1]],
+        [2, 1, 21, 3],
+        [3, 2, 22, 4],
+        [4, 3, 5, previous[-2]],
+        [5, 4, 6, previous[-3]],
+        [6, 5, 23, 7],
+        [7, 6, 24, 8],
+        [8, 7, 9, previous[-4]],
+        [9, 8, 10, previous[-5]],
+        [10, 9, 25, 11],
+        [11, 10, 26, 12],
+        [12, 11, 13, previous[-6]],
+        [13, 12, 14, previous[-7]],
+        [14, 13, 27, 15],
+        [15, 14, 28, 16],
+        [16, 15, 17, previous[-8]],
+        [17, 16, 18, previous[-9]],
+        [18, 17, 29, 19],
+        [19, 18, 20, 0],
+        [20, 21, 19],
+        [21, 2, 20],
+        [22, 23, 3],
+        [23, 6, 22],
+        [24, 25, 7],
+        [25, 10, 24],
+        [26, 27, 11],
+        [27, 14, 26],
+        [28, 29, 15],
+        [29, 18, 28],
+    ]
+    add_edges(G, 20, new_edges)
+
+    # all the rings
+    pos = 50
+    for _ in range(1, num_rings + 1):
+        previous = [-1, -2, -3, -4, -5, -6, -7, -8, -9, -10]
+        new_edges = [
+            [0, 19, 1, previous[0]],
+            [1, 0, 2, previous[-1]],
+            [2, 1, 21, 3],
+            [3, 2, 22, 4],
+            [4, 3, 5, previous[-2]],
+            [5, 4, 6, previous[-3]],
+            [6, 5, 23, 7],
+            [7, 6, 24, 8],
+            [8, 7, 9, previous[-4]],
+            [9, 8, 10, previous[-5]],
+            [10, 9, 25, 11],
+            [11, 10, 26, 12],
+            [12, 11, 13, previous[-6]],
+            [13, 12, 14, previous[-7]],
+            [14, 13, 27, 15],
+            [15, 14, 28, 16],
+            [16, 15, 17, previous[-8]],
+            [17, 16, 18, previous[-9]],
+            [18, 17, 29, 19],
+            [19, 18, 20, 0],
+            [20, 21, 19],
+            [21, 2, 20],
+            [22, 23, 3],
+            [23, 6, 22],
+            [24, 25, 7],
+            [25, 10, 24],
+            [26, 27, 11],
+            [27, 14, 26],
+            [28, 29, 15],
+            [29, 18, 28],
+        ]
+        add_edges(G, pos, new_edges)
+        pos += 30
+
+    # top cap
+    previous = [-1, -2, -3, -4, -5, -6, -7, -8, -9, -10]
+    new_edges = [
+        [0, 14, 1, previous[0]],
+        [1, 0, 2, previous[-1]],
+        [2, 1, 16, 3],
+        [3, 2, 4, previous[-2]],
+        [4, 3, 5, previous[-3]],
+        [5, 4, 17, 6],
+        [6, 5, 7, previous[-4]],
+        [7, 6, 8, previous[-5]],
+        [8, 7, 18, 9],
+        [9, 8, 10, previous[-6]],
+        [10, 9, 11, previous[-7]],
+        [11, 10, 19, 12],
+        [12, 11, 13, previous[-8]],
+        [13, 12, 14, previous[-9]],
+        [14, 0, 13, 15],
+        [15, 14, 19, 16],
+        [16, 2, 15, 17],
+        [17, 5, 16, 18],
+        [18, 8, 17, 19],
+        [19, 11, 18, 15],
+    ]
+    add_edges(G, pos, new_edges)
+
+    print_adj_list(G)
+    check(G)
+    print("\n")
+    return 1
+
+
 def main(cap_type, cap_turn, cap_flip, num_rings, max_n):
     # bottom cap type
     if cap_type == 19:
@@ -419,3 +561,7 @@ for cap_type in range(19, 23):
             num_rings = 0
             while main(cap_type, cap_turn, cap_flip, num_rings, max_n):
                 num_rings += 1
+
+num_rings = 0
+while unique_family(max_n, num_rings):
+    num_rings += 1
