@@ -729,8 +729,6 @@ def main(cap_type, cap_turn, cap_flip, num_rings, max_n):
     num_v = bc_v + ring_v * num_rings + tc_v
     if num_v > max_n:
         return 0
-    if (num_v - 70) % 30 == 0:
-        return 1
     G = [[] for _ in range(num_v)]
 
     # fill in info for bottom cap (common cap)
