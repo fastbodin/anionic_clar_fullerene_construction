@@ -1,6 +1,7 @@
 repos:
   # Using this mirror lets us use mypyc-compiled black, which is about 2x faster
-  - repo: https://github.com/psf/black-pre-commit-mirror
+  - repo: https://github.com/psf/black
+    #https://github.com/psf/black-pre-commit-mirror
     rev: 24.8.0
     hooks:
       - id: black
@@ -9,3 +10,7 @@ repos:
         # pre-commit's default_language_version, see
         # https://pre-commit.com/#top_level-default_language_version
         language_version: python3.12
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+    -   id: trailing-whitespace

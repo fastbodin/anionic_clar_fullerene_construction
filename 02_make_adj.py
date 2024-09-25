@@ -80,7 +80,9 @@ def add_cap(cap_type, cap_turn, cap_flip, num_rings):
         # since the vertices of the top cap list neighbors in clockwise order
         # things get twisted otherwise
         if cap_type == 1:
-            prev_r_v = shift_by_turns([-14, -1, -3, -5, -6, -7, -9, -11, -13], cap_turn)
+            prev_r_v = shift_by_turns(
+                [-14, -1, -3, -5, -6, -7, -9, -11, -13], cap_turn
+            )
         elif cap_type == 2:
             prev_r_v = shift_by_turns(
                 [-14, -1, -3, -5, -7, -8, -10, -12, -13], cap_turn
@@ -118,11 +120,17 @@ def add_cap(cap_type, cap_turn, cap_flip, num_rings):
             print("bad cap_type")
             exit(0)
     elif num_rings % 3 == 1:
-        prev_r_v = shift_by_turns([-1, -3, -5, -7, -9, -11, -13, -15, -17], cap_turn)
+        prev_r_v = shift_by_turns(
+            [-1, -3, -5, -7, -9, -11, -13, -15, -17], cap_turn
+        )
     elif num_rings % 3 == 2:
-        prev_r_v = shift_by_turns([-3, -5, -7, -9, -11, -13, -15, -17, -1], cap_turn)
+        prev_r_v = shift_by_turns(
+            [-3, -5, -7, -9, -11, -13, -15, -17, -1], cap_turn
+        )
     elif num_rings % 3 == 0:
-        prev_r_v = shift_by_turns([-5, -7, -9, -11, -13, -15, -17, -1, -3], cap_turn)
+        prev_r_v = shift_by_turns(
+            [-5, -7, -9, -11, -13, -15, -17, -1, -3], cap_turn
+        )
     else:
         print("bad num_rings")
         exit(0)
