@@ -25,11 +25,11 @@ tight upper bounds for the $p$-anionic Clar number of fullerenes on $n$ vertices
 
 **NOTE:** There are other fullerenes that maximize the $p$-anionic Clar
 numbers on $n$ vertices, the fullerenes generated here are simply
-representatives defined by the constructions in [INSERT PAPER].
+those defined by the constructions in [INSERT PAPER].
 
 ### Requirements:
 
-1. A Python library that can call `import sys`
+A Python library that can call `import sys`
 
 ### Files:
 There are seven files used to generate fullerenes:
@@ -55,11 +55,11 @@ number on $n \ge 110$ vertices where $n$ is congruent to 2 modulo 6
 `build/12_4_mod_6_make_adj.py` <- Generates fullerenes that maximize the 12-anionic Clar
 number on $n \ge 88$ vertices where $n$ is congruent to 4 modulo 6
 
-**Note:** leapfrog fullerenes maximize the 12-anionic Clar number on $n$
+**Note:** Leapfrog fullerenes maximize the 12-anionic Clar number on $n$
 vertices when $n$ is congruent to $0$ modulo $6$.
 
 ### To run:
-`{file you want to run}.py {n}` where `n` is the maximum size of a
+`python {file you want to run} {n}` where `n` is the maximum size of a
 fullerene you would like to generate.
 
 ### Output:
