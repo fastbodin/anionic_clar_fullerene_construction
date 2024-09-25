@@ -54,7 +54,7 @@ vertices.
 \ge 110$ ($n \equiv 2 \mod{6}$) vertices.
 
 `build/12_4_mod_6_make_adj.py` <- Fullerenes that maximize $C_{12}(F_n)$ on $n
-\ge 88$ ($n \equiv 4 \mod{6}$) vertices.
+= 70$ and $n \ge 88$ ($n \equiv 4 \mod{6}$) vertices.
 
 **Note:** Leapfrog fullerenes maximize the 12-anionic Clar number
 $n \equiv 0 \mod{6}$ vertices.
