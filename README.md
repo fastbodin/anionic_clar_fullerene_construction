@@ -36,7 +36,7 @@ A Python library that can call `import sys`
 There are seven files used to generate fullerenes:
 
 `build/02_make_adj.py` <- Fullerenes that maximize $C_2(F_n)$ on $n \ge 40$ ($n
-\neq 40$) vertices.
+\neq 44$) vertices.
 
 `build/04_make_adj.py` <- Fullerenes that maximize $C_4(F_n)$ on $n \ge 36$ ($n
 \neq 40$) vertices.
