@@ -93,11 +93,10 @@ If you use this code in your research, please cite it via:
 ```
 @software{Slobodin_Constructions_of_fullerenes_2024,
   author =        {Slobodin, A.},
-  month =         sep,
+  month =         oct,
   title =         {{Constructions of fullerenes that maximize the
                    anionic Clar number}},
   year =          {2024},
-  url =           {https://github.com/fastbodin/
-                  anionic_clar_fullerene_construction},
+  url =           {https://github.com/fastbodin/anionic_clar_fullerene_construction},
 }
 ```
