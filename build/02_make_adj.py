@@ -18,8 +18,8 @@ def print_adj_list(G):
     print("{}".format(len(G)))
     for v in range(num_v):
         v_deg = 0
-        # mystr = "3"
-        mystr = "{:3d}".format(v)
+        mystr = "3"
+        # mystr = "{:3d}".format(v)
         for u in range(len(G[v])):
             mystr += " {:3d}".format(G[v][u])
             v_deg += 1
